@@ -60,7 +60,7 @@ super + {b,m,n,r,s,t,w,x}
 
 # Launch Apps
 super + shift + {f,w,e}
-	{thunar,brave,geany}
+	{thunar,thorium-browser,geany}
 
 # Terminal Apps
 super + shift +{n,r}

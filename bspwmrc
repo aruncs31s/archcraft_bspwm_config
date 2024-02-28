@@ -120,7 +120,7 @@ for i in ${code[@]}; do
 done
 
 ## 5 > office and docs (always open office/doc apps on workspace-5)
-declare -a office=(Gucharmap Atril Evince Obsidian libreoffice-writer libreoffice-calc libreoffice-impress
+declare -a office=(Gucharmap Atril Evince obsidian libreoffice-writer libreoffice-calc libreoffice-impress
 	libreoffice-startcenter libreoffice Soffice *:libreofficedev *:soffice)
 for i in ${office[@]}; do
 	bspc rule -a $i desktop='^6' follow=on focus=on
