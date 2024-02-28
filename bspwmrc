@@ -105,7 +105,7 @@ bspc rule -a xfce4-terminal desktop='^1' follow=on focus=on
 ## 2 > web (always open web browser on workspace-2)
 bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
-bspc rule -a Thorium-browser desktop='^3' follow=on focus=on
+bspc rule -a Thorium-browser desktop='^2' follow=on focus=on
 
 ## 3 > files (always open file manager on workspace-3)
 declare -a files=(Pcmanfm Thunar qBittorrent)
