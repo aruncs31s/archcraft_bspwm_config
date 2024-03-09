@@ -5,7 +5,7 @@
 # ------------------------------------------------------------------------------
 
 # Colors
-background='#000000'
+background='#222d32'
 foreground='#c4c7c5'
 color0='#263640'
 color1='#ec7875'
@@ -29,7 +29,7 @@ light_value='0.05'
 dark_value='0.30'
 
 # Wallpaper
-wdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+wdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 wallpaper="$wdir/wallpaper"
 
 # Polybar

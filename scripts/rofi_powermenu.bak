@@ -3,9 +3,10 @@
 ## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
 
 # Import Current Theme
-DIR="/usr/share/archcraft/dwm"
-RASI="$DIR/theme/rofi/powermenu.rasi"
-CNFR="$DIR/theme/rofi/confirm.rasi"
+DIR="$HOME/.config/bspwm"
+STYLE="forest.new"
+RASI="$DIR/themes/$STYLE/rofi/powermenu.rasi"
+CNFR="$DIR/themes/$STYLE/rofi/confirm.rasi"
 
 # Theme Elements
 prompt="`hostname` (`echo $DESKTOP_SESSION`)"
@@ -79,7 +80,7 @@ run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		betterlockscreen --lock
 	elif [[ "$1" == '--opt2' ]]; then
-		confirm_run 'dwmc quit'
+		confirm_run 'bspc quit'
 	elif [[ "$1" == '--opt3' ]]; then
 		confirm_run 'mpc -q pause' 'pulsemixer --mute' 'betterlockscreen --suspend'
 	elif [[ "$1" == '--opt4' ]]; then

@@ -133,11 +133,11 @@ for i in ${comm[@]}; do
 done
 
 ## 7 > media (always open media apps on workspace-7)
-declare -a media=(Audacity mpv Music MPlayer Lxmusic Inkscape Gimp-2.10 obs)
+declare -a media=(Audacity mpv Music MPlayer Spotify Lxmusic Inkscape Gimp-2.10 obs)
 for i in ${media[@]}; do
-	bspc rule -a $i desktop='^7' state=floating follow=on focus=on
+	bspc rule -a $i desktop='^7' follow=on focus=on
 done
-
+# state=floating
 ## 8 > system (always open system apps on workspace-8)
 bspc rule -a 'VirtualBox Manager' desktop='^8' follow=on focus=on
 bspc rule -a GParted desktop='^8' follow=on focus=on
@@ -195,9 +195,9 @@ bspbar &
 bspcomp &
 bspdunst &
 bspfloat &
-# conky -c ~/.config/conky/breaking-bad/AURO-breaking-bad-LUA.conkyrc &
+conky -c ~/.config/conky/breaking-bad/AURO-breaking-bad-LUA.conkyrc &
 # conky -c ~/.config/conky/TP-Troll-Cpu.conkyrc &
 # conky -c ~/.config/conky/TP-Troll-Mem.conkyrc &
 # conky -c ~/.config/conky/JA-Phone-Year-Gray.conkyrc &
-# conky -c ~/.config/conky/Arco-Def-Cal.conkyrc &
+conky -c ~/.config/conky/Arco-Def-Cal.conkyrc &
 libinput-gestures-setup start &
