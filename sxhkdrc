@@ -10,9 +10,9 @@ XF86RFKill
 super + F1 
 		xfce4-terminal --drop-down 
 
-super + shift + x
-		betterlockscreen --suspend
-
+# super + shift + x
+# 		betterlockscreen --suspend
+#
 
 super + e 
 	thunar
@@ -170,7 +170,7 @@ super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # Toggle Layout (Tiled/Monocle)
-super + shift + m
+super + shift + x
 	bspc desktop -l next
 
 # Toggle Fullscreen
