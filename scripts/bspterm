@@ -7,14 +7,15 @@
 # bspwm directory
 DIR="$HOME/.config/bspwm"
 CONFIG="$DIR/alacritty/alacritty.toml"
+CONFIG_T="$DIR/alacritty/alacritty_without_tmux.toml"
 
 if [ "$1" == "--float" ]; then
-	alacritty --class 'alacritty-float,alacritty-float' --config-file "$CONFIG"
+	alacritty --class 'alacritty-float,alacritty-float' --config-file "$CONFIG_T"
 elif [ "$1" == "--full" ]; then
 	alacritty --class 'alacritty-fullscreen,alacritty-fullscreen' --config-file "$CONFIG" \
-			  -o window.startup_mode="'Fullscreen'" \
-			  window.padding.x=30 window.padding.y=30 \
-			  window.opacity=0.95 font.size=14
+		-o window.startup_mode="'Fullscreen'" \
+		window.padding.x=30 window.padding.y=30 \
+		window.opacity=0.95 font.size=14
 else
 	alacritty --config-file "$CONFIG"
 fi

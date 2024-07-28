@@ -46,7 +46,7 @@ super + {h,j,k,l}
     bspc node -f {west,south,north,east}
 # Rofi App Launcher
 super + d
-	rofi_launcher
+	ulauncher-toggle
 
 # Rofi Run
 alt + F2
@@ -194,7 +194,7 @@ alt + {_,shift + }Tab
 	bspc node -f {next.local,prev.local}
 
 # Switch to last opened workspace
-super + {Tab,grave}
-	bspc {node,desktop} -f last
+# super + {Tab,grave}
+	# bspc {node,desktop} -f last
 	
 ##---------- EOF ----------##

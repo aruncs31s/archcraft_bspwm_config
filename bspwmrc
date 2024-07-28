@@ -20,14 +20,14 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 ## Bspwm colors
 # BSPWM_FBC='#00BCD4'
-BSPWM_FBC='#00ffff'
+BSPWM_FBC='#00BCD4'
 ## 00BCD4'
-BSPWM_NBC='#000000'
+BSPWM_NBC='#2b303b'
 BSPWM_ABC='#ba68c8'
 BSPWM_PFC='#61c766'
 
 ## Bspwm appearance
-BSPWM_BORDER='3'
+BSPWM_BORDER='2'
 BSPWM_GAP='10'
 BSPWM_SRATIO='0.50'
 
@@ -100,14 +100,15 @@ bspc wm --adopt-orphans
 bspc rule -r *:*
 
 ## 1 > terminal (always open terminal on workspace-1)
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
-bspc rule -a xfce4-terminal desktop='^1' follow=on focus=on
+# bspc rule -a Alacritty desktop='^1' follow=on focus=on
+# bspc rule -a xfce4-terminal desktop='^1' follow=on focus=on
 
 ## 2 > web (always open web browser on workspace-2)
 bspc rule -a firefox desktop='^2' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 bspc rule -a Thorium-browser desktop='^2' follow=on focus=on
-
+bspc rule -a Brave desktop='^2' follow=on focus=on
+bspc rule -a Vivaldi desktop='^2' follow=on focus=on
 ## 3 > files (always open file manager on workspace-3)
 declare -a files=(Pcmanfm Thunar qBittorrent)
 for i in ${files[@]}; do
@@ -202,3 +203,4 @@ conky -c ~/.config/conky/breaking-bad/AURO-breaking-bad-LUA.conkyrc &
 # conky -c ~/.config/conky/JA-Phone-Year-Gray.conkyrc &
 conky -c ~/.config/conky/Arco-Def-Cal.conkyrc &
 libinput-gestures-setup start &
+ulauncher &
