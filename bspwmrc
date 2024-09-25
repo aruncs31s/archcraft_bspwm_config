@@ -22,7 +22,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # BSPWM_FBC='#00BCD4'
 BSPWM_FBC='#00BCD4'
 ## 00BCD4'
-BSPWM_NBC='#2b303b'
+BSPWM_NBC='#000000'
 BSPWM_ABC='#ba68c8'
 BSPWM_PFC='#61c766'
 
@@ -88,7 +88,7 @@ bspc config presel_feedback_color "$BSPWM_PFC"
 # bspc config gapless_monocle true
 # bspc config paddingless_monocle true
 # bspc config single_monocle false
-# bspc config focus_follows_pointer true
+bspc config focus_follows_pointer true
 # bspc config presel_feedback true
 
 ## Manage all the unmanaged windows remaining from a previous session.

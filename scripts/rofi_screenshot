@@ -4,7 +4,7 @@
 
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="catppuccin"
+STYLE="forest.new"
 RASI="$DIR/themes/$STYLE/rofi/screenshot.rasi"
 
 # Theme Elements

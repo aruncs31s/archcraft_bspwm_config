@@ -2,7 +2,7 @@
 
 Net/ThemeName "Adapta-Nokto"
 Net/IconThemeName "Archcraft-Dark"
-Gtk/CursorThemeName "macOS"
+Gtk/CursorThemeName "Pear"
 Net/EnableEventSounds "0"
 Net/EnableInputFeedbackSounds "0"
 Xft/DPI "-1"
