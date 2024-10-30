@@ -7,7 +7,7 @@
 
 ## Import additional configuration files.
 import = [
-  "~/.config/bspwm/alacritty/colors.toml",
+  "~/.config/bspwm/alacritty/colorschemes/Hund.toml",
   "~/.config/bspwm/alacritty/fonts.toml",
 ]
 
@@ -38,8 +38,8 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.90
-blur = false
+opacity = 0.9
+blur = true
 startup_mode = "Windowed"
 dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
@@ -86,7 +86,7 @@ blinking = "On"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]
-hide_when_typing = false
+hide_when_typing = true
 
 ## HINTS ----------------------------------------------------------
 [[hints.enabled]]

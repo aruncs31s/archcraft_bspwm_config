@@ -53,19 +53,25 @@ alt + F2
 	rofi_runner
 
 # Rofi Menus/Applets
-super + {b,m,n,r,s,t,w,x}
-	{rofi_bluetooth,rofi_music,network_menu,rofi_asroot,rofi_screenshot,rofi_themes,rofi_windows,rofi_powermenu}
+super + {b,m,r,s,t,w,x}
+	{rofi_bluetooth,rofi_music,rofi_asroot,rofi_screenshot,rofi_themes,rofi_windows,rofi_powermenu}
 
+super + shift + n 
+	network_menu
 ##---------- Applications ----------##
 
 # Launch Apps
 super + shift + {f,w,e}
 	{thunar,thorium-browser,geany}
 
+super + n 
+	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e nvim
+
 # Terminal Apps
-super + shift +{n,r}
+super + shift + r
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {nvim,ranger}
 #
+
 # ctrl + alt + {v,r,h}
 # 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {vim,ranger,htop}
 
