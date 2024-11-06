@@ -5,15 +5,16 @@
 
 ## GENERAL --------------------------------------------------------
 
+[general]
 ## Import additional configuration files.
-general.Import = [
-  "~/.config/bspwm/alacritty/colorschemes/Hund.toml",
+general.import = [
+  "~/.config/bspwm/alacritty/colors.toml",
   "~/.config/bspwm/alacritty/fonts.toml",
 ]
 
 ## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
 ## Entries in shell.args are passed as arguments to the shell.
-# shell = { program = "/bin/tmux" }
+#shell = { program = "/bin/zsh", args = ["--login"] }
 
 ## Directory the shell is started in. When this is unset, or "None",
 ## the working directory of the parent process will be used.
@@ -38,8 +39,8 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 0.9
-blur = true
+opacity = 1.0
+blur = false
 startup_mode = "Windowed"
 dynamic_title = true
 class = { instance = "Alacritty", general = "Alacritty" }
@@ -47,13 +48,13 @@ decorations_theme_variant = "None"
 
 ## Number of lines/columns (not pixels) in the terminal.
 [window.dimensions]
-columns = 82
+columns = 95
 lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 1
-y = 1
+x = 10
+y = 10
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -61,13 +62,13 @@ history = 10000
 multiplier = 3
 
 ## BELL -----------------------------------------------------------
-# [bell]
-# animation = "Linear"
-# duration = 20
-# command = { program = "paplay", args = [
-#   "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
-# ] }
-#
+[bell]
+animation = "Linear"
+duration = 20
+command = { program = "paplay", args = [
+  "/usr/share/sounds/freedesktop/stereo/dialog-error.oga",
+] }
+
 ## SELECTION ------------------------------------------------------
 [selection]
 save_to_clipboard = true
@@ -86,7 +87,7 @@ blinking = "On"
 
 ## MOUSE ----------------------------------------------------------
 [mouse]
-hide_when_typing = true
+hide_when_typing = false
 
 ## HINTS ----------------------------------------------------------
 [[hints.enabled]]

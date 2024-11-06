@@ -19,15 +19,15 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 ## Current theme ---------------------------------------------#
 
 ## Bspwm colors
-# BSPWM_FBC='#00BCD4'
-BSPWM_FBC='#00BCD4'
+# BSPWM_FBC='#007B82'
+BSPWM_FBC='#007B82'
 ## 00BCD4'
-BSPWM_NBC='#000000'
-BSPWM_ABC='#ba68c8'
-BSPWM_PFC='#61c766'
+BSPWM_NBC='#01161b'
+BSPWM_ABC='#05bbc5'
+BSPWM_PFC='#028c94'
 
 ## Bspwm appearance
-BSPWM_BORDER='2'
+BSPWM_BORDER='1'
 BSPWM_GAP='10'
 BSPWM_SRATIO='0.50'
 
@@ -200,3 +200,9 @@ conky -c ~/.config/conky/Arco-Def-Cal.conkyrc &
 
 libinput-gestures -c ~/.config/libinput-gestures.i3.conf &
 ulauncher &
+
+# Enable titlebar
+exec bspc onfig titlebar yes
+
+# Set titlebar style (optional)
+exec bspc onfig titlebar-style bordercless

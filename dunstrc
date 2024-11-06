@@ -6,28 +6,28 @@ follow = mouse
 width = 300
 height = 80
 origin = top-right
-offset = 10x40
+offset = 10x36
 corner_radius = 0
 scale = 0
 notification_limit = 0
 progress_bar = true
 progress_bar_height = 80
-progress_bar_frame_width = 2
+progress_bar_frame_width = 1
 progress_bar_min_width = 300
 progress_bar_max_width = 300
 indicate_hidden = yes
 transparency = 0
-separator_height = 2
+separator_height = 1
 padding = 15
 horizontal_padding = 15
 text_icon_padding = 0
-frame_width = 2
+frame_width = 1
 gap_size = 0
 separator_color = frame
 sort = yes
 idle_threshold = 120
-font = Iosevka Custom 9
-line_height = 2
+font = Iosevka 10
+line_height = 1
 markup = full
 format = %s\n%b
 alignment = left
@@ -54,18 +54,18 @@ class = Dunst
 
 [urgency_low]
 timeout = 2
-background = "#000000"
-foreground = "#c4c7c5"
-frame_color = "#0d0d0d"
+background = "#01161b"
+foreground = "#66FFFF"
+frame_color = "#007B82"
 
 [urgency_normal]
 timeout = 5
-background = "#000000"
-foreground = "#c4c7c5"
-frame_color = "#0d0d0d"
+background = "#01161b"
+foreground = "#66FFFF"
+frame_color = "#007B82"
 
 [urgency_critical]
 timeout = 0
-background = "#000000"
-foreground = "#ec7875"
-frame_color = "#ec7875"
+background = "#01161b"
+foreground = "#ff0000"
+frame_color = "#ff0000"

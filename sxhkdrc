@@ -65,7 +65,7 @@ super + shift + {f,w,e}
 	{thunar,thorium-browser,geany}
 
 super + n 
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e nvim
+	alacritty --config-file ~/.config/alacritty/alacritty.toml -e nvim
 
 # Terminal Apps
 super + shift + r
