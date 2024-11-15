@@ -4,7 +4,7 @@
 
 # Import Current Theme
 DIR="$HOME/.config/bspwm"
-STYLE="hack"
+STYLE="forest.new"
 RASI="$DIR/themes/$STYLE/rofi/music.rasi"
 
 # Theme Elements

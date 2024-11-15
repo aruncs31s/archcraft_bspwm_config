@@ -1,30 +1,3 @@
-## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
-##
-## Configuration for Alacritty, the GPU enhanced terminal emulator.
-## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
-
-## GENERAL --------------------------------------------------------
-
-[general]
-## Import additional configuration files.
-general.import = [
-  "~/.config/bspwm/alacritty/colors.toml",
-  "~/.config/bspwm/alacritty/fonts.toml",
-]
-
-## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
-## Entries in shell.args are passed as arguments to the shell.
-#shell = { program = "/bin/zsh", args = ["--login"] }
-
-## Directory the shell is started in. When this is unset, or "None",
-## the working directory of the parent process will be used.
-#working_directory = "None"
-
-## Live config reload
-live_config_reload = true
-
-## Offer IPC using alacritty msg
-ipc_socket = true
 
 ## ENVIRONMENT ----------------------------------------------------
 
@@ -39,7 +12,7 @@ WINIT_X11_SCALE_FACTOR = "1.0"
 position = "None"
 dynamic_padding = true
 decorations = "full"
-opacity = 1.0
+opacity = 0.93
 blur = false
 startup_mode = "Windowed"
 dynamic_title = true
@@ -48,13 +21,13 @@ decorations_theme_variant = "None"
 
 ## Number of lines/columns (not pixels) in the terminal.
 [window.dimensions]
-columns = 95
+columns = 82
 lines = 24
 
 ## Blank space added around the window in pixels.
 [window.padding]
-x = 10
-y = 10
+x = 1
+y = 1
 
 ## SCROLLING ------------------------------------------------------
 [scrolling]
@@ -108,3 +81,33 @@ renderer = "None"
 print_events = false
 highlight_damage = false
 prefer_egl = false
+
+[general]
+
+## Directory the shell is started in. When this is unset, or "None",
+## the working directory of the parent process will be used.
+#working_directory = "None"
+
+## Live config reload
+live_config_reload = true
+
+## Offer IPC using alacritty msg
+ipc_socket = true
+## Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
+##
+## Configuration for Alacritty, the GPU enhanced terminal emulator.
+## It's a very basic and simple config file, for full configuration, Run `man 5 alacritty`
+
+## GENERAL --------------------------------------------------------
+
+## Import additional configuration files.
+import = [
+  "~/.config/bspwm/alacritty/colors.toml",
+  "~/.config/alacritty/fonts.toml",
+]
+
+[terminal]
+
+## You can set shell.program to the path of your favorite shell, e.g. /bin/zsh.
+## Entries in shell.args are passed as arguments to the shell.
+# shell = { program = "/bin/tmux", args = ["new-session", "-A", "-s", "Term"] }

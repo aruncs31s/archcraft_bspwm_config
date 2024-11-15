@@ -5,7 +5,7 @@
 ## launch alacritty with bspwm config
 
 # bspwm directory
-DIR="$HOME/.config/"
+DIR="$HOME/.config/bspwm/"
 CONFIG="$DIR/alacritty/alacritty.toml"
 CONFIG_T="$DIR/alacritty/alacritty_without_tmux.toml"
 

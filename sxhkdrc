@@ -46,7 +46,8 @@ super + {h,j,k,l}
     bspc node -f {west,south,north,east}
 # Rofi App Launcher
 super + d
-	rofi_launcher
+	ulauncher-toggle
+	# rofi_launcher
 
 # Rofi Run
 alt + F2
