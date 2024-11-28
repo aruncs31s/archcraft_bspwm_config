@@ -68,6 +68,10 @@ super + shift + {f,w,e}
 super + n 
 	alacritty --config-file ~/.config/alacritty/alacritty.toml -e nvim
 
+super + o
+	alacritty --config-file ~/.config/alacritty/alacritty.toml -e daily_notes.sh
+
+
 # Terminal Apps
 super + shift + r
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.toml -e {nvim,ranger}

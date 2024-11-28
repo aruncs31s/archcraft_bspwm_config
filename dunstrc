@@ -26,7 +26,7 @@ gap_size = 0
 separator_color = frame
 sort = yes
 idle_threshold = 120
-font = Iosevka Custom 9
+font = CaskaydiaCove Nerd 9
 line_height = 2
 markup = full
 format = %s\n%b
@@ -54,18 +54,18 @@ class = Dunst
 
 [urgency_low]
 timeout = 2
-background = "#000000"
+background = "#2e3440"
 foreground = "#c4c7c5"
-frame_color = "#0d0d0d"
+frame_color = "#39404f"
 
 [urgency_normal]
 timeout = 5
-background = "#000000"
+background = "#2e3440"
 foreground = "#c4c7c5"
-frame_color = "#0d0d0d"
+frame_color = "#39404f"
 
 [urgency_critical]
 timeout = 0
-background = "#000000"
+background = "#2e3440"
 foreground = "#ec7875"
 frame_color = "#ec7875"

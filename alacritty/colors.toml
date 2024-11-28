@@ -1,7 +1,7 @@
 ## Colors configuration
 [colors.primary]
-background = "#01161b"
-foreground = "#00ff00"
+background = "#2e3440"
+foreground = "#d8dee9"
 
 [colors.normal]
 black = "#32363D"

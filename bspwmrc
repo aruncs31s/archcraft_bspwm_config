@@ -23,7 +23,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # BSPWM_FBC='#00BCD4'
 BSPWM_FBC='#00BCD4'
 ## 00BCD4'
-BSPWM_NBC='#000000'
+BSPWM_NBC='#2e3440'
 BSPWM_ABC='#ba68c8'
 BSPWM_PFC='#61c766'
 
@@ -193,7 +193,7 @@ bspbar &
 bspcomp &
 bspdunst &
 bspfloat &
-conky -c ~/.config/conky/breaking-bad/AURO-breaking-bad-LUA.conkyrc &
+# conky -c ~/.config/conky/breaking-bad/AURO-breaking-bad-LUA.conkyrc &
 # conky -c ~/.config/conky/TP-Troll-Cpu.conkyrc &
 # conky -c ~/.config/conky/TP-Troll-Mem.conkyrc &
 # conky -c ~/.config/conky/JA-Phone-Year-Gray.conkyrc &
@@ -203,9 +203,11 @@ libinput-gestures -c ~/.config/libinput-gestures.i3.conf &
 ulauncher &
 
 # Enable titlebar
-exec bspc onfig titlebar yes
+exec bspc onfig titlebar yes *
 
 # Set titlebar style (optional)
-exec bspc onfig titlebar-style bordercless
+exec bspc onfig titlebar-style bordercless &
 
 nitrogen --restore &
+
+conky -c ~/.config/conky/syclo/AP-clock-cyan-nobg-topleft.conkyrc &

@@ -103,7 +103,7 @@ ipc_socket = true
 ## Import additional configuration files.
 import = [
   "~/.config/bspwm/alacritty/colors.toml",
-  "~/.config/alacritty/fonts.toml",
+  "~/.config/bspwm/alacritty/fonts.toml",
 ]
 
 [terminal]
