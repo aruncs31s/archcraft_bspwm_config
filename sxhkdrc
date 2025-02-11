@@ -26,7 +26,7 @@ super + e
 
 # Terminal (alacritty)
 super + Return
-	bspterm
+	kitty
 
 # Terminal (floating)
 super + shift + Return

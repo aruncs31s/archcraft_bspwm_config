@@ -3,5 +3,5 @@
 /* Text Font */
 
 * {
-    font: "CaskaydiaCove Nerd 10";
+    font: "CaskaydiaCove 10";
 }
