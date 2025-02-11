@@ -6,12 +6,12 @@
 
 ## Theme ------------------------------------
 BDIR="$HOME/.config/bspwm"
-TDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
+TDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 THEME="${TDIR##*/}"
 
 source "$BDIR"/themes/"$THEME"/theme.bash
-altbackground="$(pastel color $background | pastel lighten $light_value | pastel format hex)"
-altforeground="$(pastel color $foreground | pastel darken $dark_value | pastel format hex)"
+altbackground="`pastel color $background | pastel lighten $light_value | pastel format hex`"
+altforeground="`pastel color $foreground | pastel darken $dark_value | pastel format hex`"
 
 ## Directories ------------------------------
 PATH_CONF="$HOME/.config"
@@ -35,15 +35,15 @@ apply_polybar() {
 	sed -i -e "s/font-0 = .*/font-0 = \"$polybar_font\"/g" ${PATH_PBAR}/config.ini
 
 	# rewrite colors file
-	cat >${PATH_PBAR}/colors.ini <<-EOF
+	cat > ${PATH_PBAR}/colors.ini <<- EOF
 		[color]
-
+		
 		BACKGROUND = ${background}
 		FOREGROUND = ${foreground}
 		ALTBACKGROUND = ${altbackground}
 		ALTFOREGROUND = ${altforeground}
 		ACCENT = ${accent}
-
+		
 		BLACK = ${color0}
 		RED = ${color1}
 		GREEN = ${color2}
@@ -77,12 +77,12 @@ apply_rofi() {
 		${PATH_BSPWM}/scripts/rofi_screenshot \
 		${PATH_BSPWM}/scripts/rofi_themes \
 		${PATH_BSPWM}/scripts/rofi_windows
-
+	
 	# apply default theme fonts
 	sed -i -e "s/font:.*/font: \"$rofi_font\";/g" ${PATH_ROFI}/shared/fonts.rasi
 
 	# rewrite colors file
-	cat >${PATH_ROFI}/shared/colors.rasi <<-EOF
+	cat > ${PATH_ROFI}/shared/colors.rasi <<- EOF
 		* {
 		    background:     ${background};
 		    background-alt: ${altbackground};
@@ -114,7 +114,7 @@ apply_terminal() {
 		-e "s/size: .*/size: $terminal_font_size/g"
 
 	# alacritty : colors
-	cat >${PATH_TERM}/colors.yml <<-_EOF_
+	cat > ${PATH_TERM}/colors.yml <<- _EOF_
 		## Colors configuration
 		colors:
 		  # Default colors
@@ -160,7 +160,7 @@ apply_appearance() {
 	GTK3FILE="$PATH_CONF/gtk-3.0/settings.ini"
 
 	# apply gtk theme, icons, cursor & fonts
-	if [[ $(pidof xsettingsd) ]]; then
+	if [[ `pidof xsettingsd` ]]; then
 		sed -i -e "s|Net/ThemeName .*|Net/ThemeName \"$gtk_theme\"|g" ${XFILE}
 		sed -i -e "s|Net/IconThemeName .*|Net/IconThemeName \"$icon_theme\"|g" ${XFILE}
 		sed -i -e "s|Gtk/CursorThemeName .*|Gtk/CursorThemeName \"$cursor_theme\"|g" ${XFILE}
@@ -169,17 +169,17 @@ apply_appearance() {
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=\"$gtk_theme\"/g" ${GTK2FILE}
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=\"$icon_theme\"/g" ${GTK2FILE}
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=\"$cursor_theme\"/g" ${GTK2FILE}
-
+		
 		sed -i -e "s/gtk-font-name=.*/gtk-font-name=$gtk_font/g" ${GTK3FILE}
 		sed -i -e "s/gtk-theme-name=.*/gtk-theme-name=$gtk_theme/g" ${GTK3FILE}
 		sed -i -e "s/gtk-icon-theme-name=.*/gtk-icon-theme-name=$icon_theme/g" ${GTK3FILE}
 		sed -i -e "s/gtk-cursor-theme-name=.*/gtk-cursor-theme-name=$cursor_theme/g" ${GTK3FILE}
 	fi
-
+	
 	# inherit cursor theme
 	if [[ -f "$HOME"/.icons/default/index.theme ]]; then
 		sed -i -e "s/Inherits=.*/Inherits=$cursor_theme/g" "$HOME"/.icons/default/index.theme
-	fi
+	fi	
 }
 
 # Dunst -------------------------------------
@@ -197,7 +197,7 @@ apply_dunst() {
 
 	# modify colors
 	sed -i '/urgency_low/Q' ${PATH_BSPWM}/dunstrc
-	cat >>${PATH_BSPWM}/dunstrc <<-_EOF_
+	cat >> ${PATH_BSPWM}/dunstrc <<- _EOF_
 		[urgency_low]
 		timeout = 2
 		background = "${background}"
@@ -245,7 +245,7 @@ apply_bspwm() {
 		-e "s/BSPWM_BORDER=.*/BSPWM_BORDER='$bspwm_border'/g" \
 		-e "s/BSPWM_GAP=.*/BSPWM_GAP='$bspwm_gap'/g" \
 		-e "s/BSPWM_SRATIO=.*/BSPWM_SRATIO='$bspwm_sratio'/g"
-
+	
 	# reload bspwm
 	bspc wm -r
 }
@@ -256,7 +256,7 @@ create_file() {
 	if [[ ! -f "$theme_file" ]]; then
 		touch ${theme_file}
 	fi
-	echo "$THEME" >${theme_file}
+	echo "$THEME" > ${theme_file}
 }
 
 # Notify User -------------------------------

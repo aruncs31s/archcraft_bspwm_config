@@ -4,7 +4,7 @@
 # Forest Theme
 # ------------------------------------------------------------------------------
 # Colors
-background='#2e3440'
+background='#000000'
 foreground='#c4c7c5'
 color0='#263640'
 color1='#ec7875'
@@ -32,14 +32,14 @@ wdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 wallpaper="$wdir/wallpaper"
 
 # Polybar
-polybar_font='CaskaydiaCove Nerd Font:size=10;3'
+polybar_font='Iosevka Nerd Font:size=10;3'
 
 # Rofi
-rofi_font='CaskaydiaCove 10'
-rofi_icon='WhiteSur-dark'
+rofi_font='Iosevka 10'
+rofi_icon='Papirus-Apps'
 
 # Terminal
-terminal_font_name='CaskaydiaCove Nerd Font'
+terminal_font_name='JetBrainsMono Nerd Font'
 terminal_font_size='10'
 
 # Geany
@@ -47,9 +47,9 @@ geany_colors='adapta.conf'
 geany_font='JetBrains Mono 10'
 
 # Appearance
-gtk_font='CaskaydiaCove Nerd 9'
-gtk_theme='WhiteSur-Dark-solid-nord'
-icon_theme='WhiteSur-dark'
+gtk_font='Noto Sans 9'
+gtk_theme='Adapta-Nokto'
+icon_theme='Archcraft-Dark'
 cursor_theme='Pear'
 
 # Dunst
@@ -57,13 +57,13 @@ dunst_width='300'
 dunst_height='80'
 dunst_offset='10x40'
 dunst_origin='top-right'
-dunst_font='CaskaydiaCove Nerd 9'
+dunst_font='Iosevka Custom 9'
 dunst_border='2'
 dunst_separator='2'
 
 # Picom
 picom_backend='glx'
-picom_corner='3'
+picom_corner='0'
 picom_shadow_r='14'
 picom_shadow_o='0.30'
 picom_shadow_x='-12'
