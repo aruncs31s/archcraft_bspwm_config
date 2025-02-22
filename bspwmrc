@@ -23,7 +23,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # BSPWM_FBC='#00BCD4'
 BSPWM_FBC='#00BCD4'
 ## 00BCD4'
-BSPWM_NBC='#000000'
+BSPWM_NBC='#1E2128'
 BSPWM_ABC='#ba68c8'
 BSPWM_PFC='#61c766'
 
@@ -202,8 +202,9 @@ conky -c ~/.config/conky/Arco-Def-Cal.conkyrc &
 libinput-gestures -c ~/.config/libinput-gestures.i3.conf &
 ulauncher &
 
+# TODO: Find out what does the followign do ?
 # Enable titlebar
-exec bspc onfig titlebar yes *
+# exec bspc onfig titlebar yes *
 
 # Set titlebar style (optional)
 exec bspc onfig titlebar-style bordercless &

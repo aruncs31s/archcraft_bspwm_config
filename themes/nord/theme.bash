@@ -4,7 +4,7 @@
 # Forest Theme
 # ------------------------------------------------------------------------------
 # Colors
-background='#000000'
+background='#1E2128'
 foreground='#c4c7c5'
 color0='#263640'
 color1='#ec7875'
@@ -50,7 +50,7 @@ geany_font='JetBrains Mono 10'
 gtk_font='Noto Sans 9'
 gtk_theme='Adapta-Nokto'
 icon_theme='Archcraft-Dark'
-cursor_theme='Pear'
+cursor_theme='macOS-White'
 
 # Dunst
 dunst_width='300'
@@ -63,7 +63,7 @@ dunst_separator='2'
 
 # Picom
 picom_backend='glx'
-picom_corner='0'
+picom_corner='12'
 picom_shadow_r='14'
 picom_shadow_o='0.30'
 picom_shadow_x='-12'

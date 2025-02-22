@@ -5,7 +5,7 @@
 # Import Current Theme
 DIR="/usr/share/archcraft/dwm"
 # DIR="$HOME/.config/bspwm"
-# STYLE="forest.new"
+# STYLE="nord"
 # RASI="$DIR/themes/$STYLE/rofi/screenshot.rasi"
 RASI="$DIR/theme/rofi/screenshot.rasi"
 
